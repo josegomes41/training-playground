@@ -7,7 +7,7 @@ pipeline {
         image 'maven:latest'
     }
 }
-step{
+steps{
     	 sh 'mvn --version'
          }
     }
@@ -16,7 +16,7 @@ step{
     	docker {
         image 'node:latest'
     }
-        step{
+        steps{
     	 sh 'npm --version'
          }
     }
