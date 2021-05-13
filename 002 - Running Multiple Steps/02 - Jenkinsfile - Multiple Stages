@@ -5,5 +5,17 @@ pipeline {
 		}
 	}
     stages {
+    
+    stage ('buid'){
+    steps{
+    
+    printDate2File('1.txt')
     }
+    
+    }
+    stage (
+}
+
+def printDate2File (filename = ''){
+	sh "date > $filename && cat $filename"
 }
