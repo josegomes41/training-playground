@@ -1,6 +1,24 @@
+
 pipeline {
-    agent { 
-	}
+    agent none
     stages {
+     stage ('maven'){
+     	 agent {dockerfile {
+	 	filename ''
+		dir
+		}}
+        	steps{
+    	    		 sh 'mvn --version'
+            	}
+         }
+     stage ('npm'){
+     	 agent {dockerfile {
+	 	filename ''
+		dir ''
+		}}
+          		 steps{
+    	      			  sh 'npm --version'
+            		 }
+             }
     }
-}
+    }
