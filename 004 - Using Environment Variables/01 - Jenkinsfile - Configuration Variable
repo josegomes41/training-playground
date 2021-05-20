@@ -4,6 +4,10 @@ pipeline {
 			image 'alpine:latest' 
 		}
 	}
+	environment{
+	
+		NOTIFICATION_EMAIL = 'asdas@email.pt'
+	}
     stages {
         stage('build') {
             steps {
