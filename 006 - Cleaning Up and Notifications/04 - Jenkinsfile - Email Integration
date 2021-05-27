@@ -20,7 +20,7 @@ pipeline {
 			def html = readFile('example.html')
 			echo html
 		}
-                emailext body: html,
+                emailext body: '${FILE,path="example.html"}',
    		 subject: 'Test Subject',
    		to: 'nb25145@novabase.pt'
             }
