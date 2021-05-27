@@ -14,7 +14,7 @@ pipeline {
             steps {
 	    	
 	    	sh """
-	    	sed "s#AQUI_VAI_ENTRAR#${PLACEHOLDER_REPLACEMENT}#g 'example.html'"
+	    	sed "s#AQUI_VAI_ENTRAR#${PLACEHOLDER_REPLACEMENT}#g" 'example.html'
 	    	""" 
 	    	script{
 			def html = readFile('example.html')
