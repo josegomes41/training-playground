@@ -14,9 +14,9 @@ pipeline {
             steps {
 	    	
 	    	sh """
-	    	sed "s#AQUI_VAI_ENTRAR#${PLACEHOLDER_REPLACEMENT}#g 006 - Cleaning Up and Notifications/example.html
+	    	sed "s#AQUI_VAI_ENTRAR#${PLACEHOLDER_REPLACEMENT}#g example.html
 	    	""" 
-	    	script{def html = readFile('006 - Cleaning Up and Notifications/example.html')}
+	    	script{def html = readFile('example.html')}
                 emailext body: html,
    		 subject: 'Test Subject',
    		to: 'nb25145@novabase.pt'
